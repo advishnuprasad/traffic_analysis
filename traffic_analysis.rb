@@ -8,8 +8,10 @@ class TrafficAnalysis
   end
 
   def get_input
+    p "Enter No of footprints:"
     @no_of_footprints = gets.chomp.to_i
     return p("Wrong input; Please give even number") if @no_of_footprints.odd?
+    p "Enter footprints:"
     @no_of_footprints.times { @foot_prints << gets.chomp.split(" ") }
   end
 
