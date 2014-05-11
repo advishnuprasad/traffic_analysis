@@ -8,10 +8,10 @@ class TrafficAnalysis
   end
 
   def get_input
-    p "Enter No of footprints:"
+    puts "Enter No of footprints:"
     @no_of_footprints = gets.chomp.to_i
-    return p("Wrong input; Please give even number") if @no_of_footprints.odd?
-    p "Enter footprints:"
+    return puts("Wrong input; Please give even number") if @no_of_footprints.odd?
+    puts "Enter footprints:"
     @no_of_footprints.times { @foot_prints << gets.chomp.split(" ") }
   end
 
@@ -28,7 +28,7 @@ class TrafficAnalysis
   def show_output
     @average.sort.each do |room_no, entry|
       avg = (entry.values.inject {|sum,l| sum+l}.to_f/entry.values.size.to_f).ceil
-      p "Room #{room_no}, #{avg} minute average visit, #{entry.values.size} visitor(s) total"
+      puts "Room #{room_no}, #{avg} minute average visit, #{entry.values.size} visitor(s) total"
     end
   end
 end
