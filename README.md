@@ -28,3 +28,10 @@ Traffic Analysis
 2. If there is an "I" entry for a visitor, there must be "O" entry
 
 
+**Ruby Version**
+
+  1.9.2-p320
+
+**How to Run**
+  
+  ruby traffic_analysis.rb
